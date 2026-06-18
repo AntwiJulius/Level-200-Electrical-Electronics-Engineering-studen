@@ -5,21 +5,16 @@ int main() {
     long long binary;
     int decimal = 0, base = 1, rem;
 
-    cout << "Enter binary number: ";
     cin >> binary;
 
-    long long temp = binary;
-
-    while (temp > 0) {
-        rem = temp % 10;
+    while (binary > 0) {
+        rem = binary % 10;
         decimal += rem * base;
         base *= 2;
-        temp /= 10;
+        binary /= 10;
     }
 
-    cout << "Decimal = " << decimal << endl;
-    cout << "Octal = " << oct << decimal << endl;
-    cout << "Hexadecimal = " << hex << decimal << endl;
+    cout << "Decimal = " << decimal;
 
     return 0;
 }
